@@ -11,6 +11,13 @@
 const userAge = 18;
 const drivingLicense = true;
 /// EDIT HERE
+if (userAge < 18){
+  console.log("Anda belum cukup umur");
+} else if (drivingLicense === true){
+  console.log("Selamat berkendara");
+} else{
+  console.log("Diharapkan untuk membuat SIM terlebih dahulu");
+}
 
 
 
@@ -25,4 +32,16 @@ const temperature = 100; /// suhu
 const unit = "F"; /// inputan
 switch (unit) {
   /// EDIT HERE
+
+  case "K" :
+    console.log( temperature + 273,15);
+    break;
+  case "F":
+    console.log((temperature * 9/5) + 32);
+    break;
+  case "C":
+      console.log(temperature);
+  default:
+      console.log("Maaf anda salah input");
 }
+

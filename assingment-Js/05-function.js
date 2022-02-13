@@ -56,7 +56,33 @@ console.log(taxCalc(salary3));
 ///   (weight/(height^2)) * 10000
 
 /// EDIT HERE
-// function checkBMI(....) { .... }
+function checkBMI(weight, height) {
+    const bmi = (weight / height ** 2) * 10000;
+    if (bmi < 18.5) {
+    return 'under weight';
+    } else if (bmi >= 18.5 && bmi < 25) {
+    return 'normal';
+    } else if (bmi >= 25 && bmi < 30) {
+    return 'over weight';
+    } else if (bmi >= 30 && bmi < 35) {
+    return 'obese';
+    } else if (bmi >= 35) {
+    return 'extremely obese';
+    } else {
+    return 'you dumb or what?! your input is invalid!';
+    }
+}
+
+const weight1 = 80;
+const height1 = 170;
+console.log(checkBMI(weight1, height1));
+
+const weight2 = 80;
+const height2 = 160;
+console.log(checkBMI(weight2, height2));
+
+console.log('================================================');
+
 
 
 /// Soal - 03
@@ -69,7 +95,17 @@ console.log(taxCalc(salary3));
 /// - (String) kalimat yang sudah kita ubah huruf pertamanya menjadi huruf besar
 
 /// EDIT HERE
-// function convToUpperCase(....) { .... }
+function convToUpperCase(sentence) {
+    return sentence.toUpperCase();
+}
+
+const sentence1 = 'hello bandung';
+console.log(convToUpperCase(sentence1));
+
+const sentence2 = 'helloworldwide';
+console.log(convToUpperCase(sentence2));
+
+console.log('================================================================');
 
 
 /// Soal - 04
@@ -88,3 +124,38 @@ console.log(taxCalc(salary3));
 
 /// EDIT HERE
 // function firstNonRepeatedChar(....) { .... }
+
+function firstNonRepeatedChar(string) {
+    const arrChar = string.split('');
+
+    const isSeparated = arrChar.filter((space) => space === ' ').length > 0;
+    let isNotTwin = '';
+
+    // mencari character yang tidak kembar
+    for (let i = 0; i < arrChar.length; i++) {
+    if (arrChar.filter((char) => char === arrChar[i]).length === 1) {
+        isNotTwin += arrChar[i];
+    }
+    }
+
+    if (isSeparated) {
+    return 'kata tidak boleh dipisah';
+    } else if (!isSeparated) {
+    if (isNotTwin.length > 0) {
+        return isNotTwin[0];
+    } else if (isNotTwin.length === 0) {
+        return isNotTwin;
+    }
+    } else {
+    return 'pastikan anda menginput string';
+    }
+}
+
+const input1 = 'hello world"';
+console.log(firstNonRepeatedChar(input1));
+
+const input2 = 'alloha';
+console.log(firstNonRepeatedChar(input2));
+
+const input3 = 'wooohoowh';
+console.log(firstNonRepeatedChar(input3));
