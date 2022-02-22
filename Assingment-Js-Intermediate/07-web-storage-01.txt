@@ -1,0 +1,5 @@
+Kamu diminta untuk melakukan analisa sederhana terhadap beberapa masalah dan tuliskan jawaban kamu di dalam file 07-web-storage-01.txt.
+
+Apa itu localStorage?
+Apa itu cookies?
+Apa perbedaan antara localStorage dan sessionStorage?
